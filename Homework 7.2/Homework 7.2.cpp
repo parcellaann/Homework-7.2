@@ -1,12 +1,33 @@
 ﻿// Homework 7.2.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
+#include <cstdlib>
 #include <iostream>
+#include <ctime>
+
+void RandArr(int arr[], int len)
+{
+	for (int j = 0; j < len; j++)
+	{
+		arr[j] = rand() % (10);
+	}
+
+	for (int j = 0; j < len; j++)
+	{
+		std::cout << arr[j] << " ";
+	}
+	std::cout << "\n";
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int arr1[10], arr2[3];
+
+	RandArr(arr1, 10);
+	RandArr(arr2, 3);
 }
+
+
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
